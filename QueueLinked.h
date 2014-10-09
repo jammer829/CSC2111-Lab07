@@ -105,17 +105,16 @@ T* QueueLinked<T>::dequeue()
 
     //DO THIS (dequeueing the last item is a special case)
     //also, check that there are items before dequeueing
+	if (sze == 0) return;
 
+	NextNode<T>* prev = NULL;
+	NextNode<T>* curr = back->getNext();  //the head
+	back->setNext(NULL);  //break the bridge link
 
-
-
-
-
-
-
-
-
-
+    prev = curr;
+    curr = curr->getNext();
+	item = prev;
+    delete prev;
 
 
     return item;
