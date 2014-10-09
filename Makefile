@@ -23,4 +23,4 @@ RombergIntegration.o: RombergIntegration.cpp RombergIntegration.h QueueLinked.h
 	$(COMPILE) RombergIntegration.cpp
 
 Problem22_1.o: Problem22_1.cpp Problem22_1.h QueueLinked.h
-	$(COMPILE) Problem22_1.o
+	$(COMPILE) Problem22_1.cpp
