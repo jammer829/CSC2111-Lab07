@@ -87,13 +87,14 @@ void QueueLinked<T>::enqueue(T* item)
 
     //DO THIS (enqueueing the first item is a special case)
 
-
-
-
-
-
-
-
+    if (back == NULL) {
+        node.setNext(node);
+        back = node;
+    } else {
+        node->setNext(back->getNext());
+        back->setNext(node);
+        back = node;
+    }
 
     sze++;
 }
