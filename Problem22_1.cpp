@@ -38,8 +38,10 @@ void Problem22_1::setUpperLimit(double b)
    upper = b;
 }
 
+#include "QueueLinked.h"
 int main()
 {
+    
    Problem22_1* p = new Problem22_1();  //mean = 10.5, variance = 5.7
 
    //lower limits
